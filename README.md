@@ -36,3 +36,51 @@ login Form html
 </div>
 </div>
 </div>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Login Form CSS
+span{
+    color:red
+}
+
+.header{
+    text-align: center;
+    background-color: black;
+    color:lightsteelblue ;
+    font-family: cursive;
+    
+}
+
+.loginFormCss{
+    background-color:lightsteelblue;
+    position:absolute;
+    top:20%;
+    left:20%;
+    right:20%;
+    height:250px;
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+LoginForm Ts file
+
+ loginForm:FormGroup
+  constructor(private fb:FormBuilder){
+    this.loginForm=this.fb.group({
+      email:['',[Validators.required]],
+      password:['',[Validators.required]]
+    })
+  }
+
+  submit(){
+    console.log(this.loginForm.value)
+  }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
